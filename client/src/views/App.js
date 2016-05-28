@@ -1,9 +1,13 @@
 import React from 'react';
+import SearchBar from './SearchBar';
 
 export default class App extends React.Component {
-
   render() {
-    return <div>Start here!</div>;
+    return (
+      <div>
+      <div>Tasks List</div>
+      <SearchBar/>
+      </div>
+    )
   }
-
-}
+};
