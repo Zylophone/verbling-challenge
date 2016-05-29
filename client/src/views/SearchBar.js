@@ -1,9 +1,10 @@
 import React from 'react';
+import {debounce} from 'lodash';
 
 export default class SearchBar extends React.Component {
   constructor(props){
     super(props);
-    this.debouncedHandleChange = _.debounce(this.handleChange, 300);
+    this.debouncedHandleChange = debounce(this.handleChange, 300);
   }
 
   handleChange(){
