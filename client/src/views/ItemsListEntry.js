@@ -1,9 +1,9 @@
 import React from 'react';
 
 const ItemsListEntry = ({item}) =>
-  <div style={{display:item.show ? 'block':'none'}}>
-    <div>{item.title}</div>
-    <div>{item.body}</div>
-  </div>
+  <ul id='listitem' style={{display:item.show ? 'block':'none'}}>
+    <li id='listtitle'>{item.title}</li>
+    <ul><li id='listbody' className='Collapse'>{item.body}</li></ul>
+  </ul>
 
 export default ItemsListEntry
