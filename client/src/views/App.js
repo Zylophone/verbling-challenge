@@ -7,7 +7,11 @@ export default class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      list: ['list1', 'list2', 'list3'],
+      list: [
+        {title: 'list1 title', body: 'list1 body', show: false},
+        {title: 'list2 title', body: 'list2 body', show: true},
+        {title: 'list3 title', body: 'list3 body', show: false}
+      ],
     }
   }
   render() {
@@ -16,7 +20,12 @@ export default class App extends React.Component {
       <div>Tasks List</div>
       <SearchBar/>
       <ItemsList itemsList = {this.state.list}/>
-      <div><Button name = 'ADD' action = {() => alert('Hello!')}/></div>
+      <div>
+        <Button name = 'Toggle All' action = {() => alert('Toggle All!')}/>
+        <Button name = 'Collapse All' action = {() => alert('Collapse All!')}/>
+        <Button name = 'Expand All' action = {() => alert('Expand All!')}/>
+        <Button name = 'Add' action = {() => alert('Add!')}/>
+      </div>
       </div>
     )
   }
