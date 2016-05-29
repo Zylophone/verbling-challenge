@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 
 export default class SearchBar extends React.Component {
   constructor(props){
