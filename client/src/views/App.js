@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchBar from './SearchBar';
+import AddItem from './AddItem';
 import ItemsList from './ItemsList';
 import Button from './Button';
 import ButtonActions from '../utils/ButtonActions';
@@ -13,8 +14,10 @@ export default class App extends React.Component {
         {title: 'list2 title', body: 'list2 body', show: false},
         {title: 'list3 title', body: 'list3 body', show: true}
       ],
+      addItem: false
     }
     this.filter = this.filter.bind(this);
+    this.addNewItem = this.addNewItem.bind(this);
   }
 
   filter(searchFilter) {
@@ -30,9 +33,21 @@ export default class App extends React.Component {
   }
 
   itemsListActions(action){
-    console.log('itemsListActions'+action);
     const newList = ButtonActions(action, this.state.list);
     this.setState({list: newList});
+  }
+
+  addNewItem(title, body){
+    const newList = ([
+      {
+        title: title,
+        body: body,
+        show: true
+      }
+    ]).concat(this.state.list);
+    this.setState({
+      list: newList
+    });
   }
 
   render() {
@@ -40,12 +55,13 @@ export default class App extends React.Component {
       <div>
       <div>Tasks List</div>
       <SearchBar filterItems = {this.filter}/>
+      <AddItem addItem = {this.state.addItem} addNewItem = {this.addNewItem}/>
       <ItemsList itemsList = {this.state.list}/>
       <div>
         <Button name = 'Toggle All' action = {() => this.itemsListActions('toggle')}/>
         <Button name = 'Collapse All' action = {() => this.itemsListActions('collapse')}/>
         <Button name = 'Expand All' action = {() => this.itemsListActions('expand')}/>
-        <Button name = 'Add' action = {() => alert('Add!')}/>
+        <Button name = 'Add' action = {() => this.setState({addItem: this.state.addItem? false: true})}/>
       </div>
       </div>
     )
