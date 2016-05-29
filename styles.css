@@ -13,13 +13,12 @@ ul, li {
   background-color:#D3D3D3;
 }
 
-#listitem {
-  height:50px;
-}
-
 #listbody {
-  display:block;
   text-overflow:ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+#listitem {
+  height:auto;
 }
