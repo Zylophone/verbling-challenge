@@ -27,7 +27,8 @@ export default class App extends React.Component {
       return {
         title: item.title,
         body: item.body,
-        show: item.title.indexOf(searchFilter) > -1 || item.body.indexOf(searchFilter) > -1
+        show: item.title.indexOf(searchFilter) > -1 || item.body.indexOf(searchFilter) > -1,
+        fullContent: false
       };
     })}
   );
@@ -52,7 +53,9 @@ export default class App extends React.Component {
   }
 
   clickItem(id){
-    this.state.list[id].show = this.state.list[id].show ? false : true;
+    //this.state.list[id].show = this.state.list[id].show ? false : true;
+    this.state.list[id].show = true;
+    this.state.list[id].fullContent = this.state.list[id].fullContent ? false : true;
     this.setState({list: this.state.list});
   }
 
@@ -67,7 +70,7 @@ export default class App extends React.Component {
         <Button name = 'Toggle All' action = {() => this.itemsListActions('toggle')}/>
         <Button name = 'Collapse All' action = {() => this.itemsListActions('collapse')}/>
         <Button name = 'Expand All' action = {() => this.itemsListActions('expand')}/>
-        <Button name = 'Add' action = {() => this.setState({addItem: this.state.addItem? false: true})}/>
+        <Button name = {this.state.addItem ? 'Close' : 'Add'} action = {() => this.setState({addItem: this.state.addItem? false: true})}/>
       </div>
       </div>
     )
