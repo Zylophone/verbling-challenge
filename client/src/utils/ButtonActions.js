@@ -1,12 +1,12 @@
 const ButtonActions = (action, list) => {
   let listItemShow;
-  console.log('action:', action);
   if(action === 'toggle'){
     return list.map((item) => {
       return {
       title: item.title,
       body: item.body,
-      show: item.show ? false : true
+      show: item.show,
+      fullContent: item.fullContent ? false : true
     }});
   } else {
     if(action === 'collapse'){
@@ -19,7 +19,8 @@ const ButtonActions = (action, list) => {
       return {
       title: item.title,
       body: item.body,
-      show: listItemShow
+      show:  item.show,
+      fullContent: listItemShow
     }})
   }
   return null;
