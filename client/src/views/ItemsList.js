@@ -1,9 +1,9 @@
 import React from 'react';
 import ItemsListEntry from './ItemsListEntry';
 
-const ItemsList = ({itemsList}) => (
+const ItemsList = ({itemsList, click}) => (
   <div>
-  {itemsList.map((item, index) => <ItemsListEntry item={item} key={index} num={index}/>)}
+  {itemsList.map((item, index) => <ItemsListEntry item={item} key={index} num={index} click = {click}/>)}
   </div>
 );
 

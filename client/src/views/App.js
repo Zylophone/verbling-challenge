@@ -18,6 +18,7 @@ export default class App extends React.Component {
     }
     this.filter = this.filter.bind(this);
     this.addNewItem = this.addNewItem.bind(this);
+    this.clickItem = this.clickItem.bind(this);
   }
 
   filter(searchFilter) {
@@ -50,13 +51,18 @@ export default class App extends React.Component {
     });
   }
 
+  clickItem(id){
+    this.state.list[id].show = this.state.list[id].show ? false : true;
+    this.setState({list: this.state.list});
+  }
+
   render() {
     return (
       <div>
       <div>Tasks List</div>
       <SearchBar filterItems = {this.filter}/>
       <AddItem addItem = {this.state.addItem} addNewItem = {this.addNewItem}/>
-      <ItemsList itemsList = {this.state.list}/>
+      <ItemsList itemsList = {this.state.list} click = {this.clickItem}/>
       <div>
         <Button name = 'Toggle All' action = {() => this.itemsListActions('toggle')}/>
         <Button name = 'Collapse All' action = {() => this.itemsListActions('collapse')}/>
