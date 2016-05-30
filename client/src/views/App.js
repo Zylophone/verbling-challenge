@@ -10,19 +10,25 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       list: [
-        {title: 'list1 ', body: 'list1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 body', show: true, fullContent: false},
-        {title: 'list2 title', body: 'list2 body', show: false, fullContent: false},
-        {title: 'list3 title', body: 'list3 body', show: true, fullContent: false},
-        {title: 'list4 title', body: 'list4 body', show: true, fullContent: false},
-        {title: 'list5 title', body: 'list5 body', show: true, fullContent: false},
-        {title: 'list6 title', body: 'list6 body', show: true, fullContent: false},
-        {title: 'list7 title', body: 'list7 body', show: true, fullContent: false},
-        {title: 'list8 title', body: 'list8 body list8 body list8 body list8 body list8 body list8 body list8 body', show: true, fullContent: false},
-        {title: 'list9 title', body: 'list9 body', show: true, fullContent: false},
-        {title: 'list10 title', body: 'list10 body', show: true, fullContent: false},
-        {title: 'list11 title', body: 'list11 body list11 body list11 body list11 body list11 body list11 body list11 body', show: true, fullContent: false},
-        {title: 'list12 title', body: 'list12 body', show: true, fullContent: false},
-        {title: 'list13 title', body: 'list13 body', show: true, fullContent: false}
+        {item: 'list1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 body', show: true, fullContent: false},
+        {item: 'list2 body', show: true, fullContent: false},
+        {item: 'list3 body', show: true, fullContent: false},
+        {item: 'list4 body', show: true, fullContent: false},
+        {item: 'list5 body', show: true, fullContent: false},
+        {item: 'list6 body', show: true, fullContent: false},
+        {item: 'list7 body', show: true, fullContent: false},
+        {item: 'list8 body list8 body list8 body list8 body list8 body list8 body list8 body', show: true, fullContent: false},
+        {item: 'list9 body', show: true, fullContent: false},
+        {item: 'list10 body', show: true, fullContent: false},
+        {item: 'list11 body list11 body list11 body list11 body list11 body list11 body list11 body', show: true, fullContent: false},
+        {item: 'list12 body', show: true, fullContent: false},
+        {item: 'list14 body list14 body', show: true, fullContent: false},
+        {item: 'list15 body', show: true, fullContent: false},
+        {item: 'list16 bodylist16 bodylist16 body', show: true, fullContent: false},
+        {item: 'list17 body', show: true, fullContent: false},
+        {item: 'list18 body', show: true, fullContent: false},
+        {item: 'list19 body', show: true, fullContent: false},
+        {item: 'list20 bodylist20 bodylist20 bodylist20 bodylist20 bodylist20 bodylist20 bodylist20 bodylist20 bodylist20 body', show: true, fullContent: false}
       ],
       addItem: false
     }
@@ -35,9 +41,8 @@ export default class App extends React.Component {
     this.setState({
       list: this.state.list.map(item => {
       return {
-        title: item.title,
-        body: item.body,
-        show: item.title.indexOf(searchFilter) > -1 || item.body.indexOf(searchFilter) > -1,
+        item: item.item,
+        show: item.item.indexOf(searchFilter) > -1,
         fullContent: false
       };
     })}
@@ -49,12 +54,12 @@ export default class App extends React.Component {
     this.setState({list: newList});
   }
 
-  addNewItem(title, body){
+  addNewItem(item){
     const newList = ([
       {
-        title: title,
-        body: body,
-        show: true
+        item: item,
+        show: true,
+        fullContent: false
       }
     ]).concat(this.state.list);
     this.setState({

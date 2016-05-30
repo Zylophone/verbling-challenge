@@ -3,8 +3,7 @@ const ButtonActions = (action, list) => {
   if(action === 'toggle'){
     return list.map((item) => {
       return {
-      title: item.title,
-      body: item.body,
+      item: item.item,
       show: item.show,
       fullContent: item.fullContent ? false : true
     }});
@@ -17,8 +16,7 @@ const ButtonActions = (action, list) => {
 
     return list.map((item) => {
       return {
-      title: item.title,
-      body: item.body,
+      item: item.item,
       show:  item.show,
       fullContent: listItemShow
     }})

@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
-var REST_PORT = 8080;
+var REST_PORT = 3000;
 
 app.use(bodyParser.json());
 app.use(express.static('../client'));

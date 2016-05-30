@@ -8,17 +8,16 @@ export default class AddItems extends React.Component {
   }
 
   submit(){
-    const title = this.refs.title.value;
     const body = this.refs.body.value;
-    this.props.addNewItem(title, body);
+    this.props.addNewItem(body);
+    this.refs.body.value = '';
   }
 
   render() {
     return (
       <div id='addnewitem' style={{display:this.props.addItem?'block':'none'}}>
-        <div>Create New List Item:</div>
-        <div><input type='text' placeholder='Title...' ref='title'/></div>
-        <div><textarea id='addnewitembody' type='text' placeholder='Content...' ref='body'/></div>
+        <h3>Create New List Item:</h3>
+        <div><textarea id='addnewitembody' type='text' placeholder='new item...' ref='body'/></div>
         <div><Button name = 'Submit' action = {this.submit}/></div>
       </div>
     )

@@ -14,8 +14,13 @@ ul, li {
     padding:0;
 }
 
-.listitem:hover {
-  background-color:#D3D3D3;
+Button {
+  font-weight: bold;
+  font-size: 0.8em;
+  margin: 1em 0.1em;
+  width: 7.5em;
+  text-align: center;
+  box-shadow: .5em .5em .2em #888888;
 }
 
 #listarea {
@@ -25,31 +30,10 @@ ul, li {
   overflow-y:scroll;
 }
 
-.listtitle {
-  font-weight: bold;
-  height: 19.5px;
-}
-
-.hideContent {
-  text-overflow:ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  height: 29.5px;
-}
-
-.showContent {
-  height: auto;
-}
-
-.listitem {
-  height: auto;
-  border-bottom: 1px solid #D3D3D3;
-}
-
 #searchbar input {
   margin: 0.5em 0em ;
   border: 3px solid #D3D3D3;
-  width: 15em;
+  width: 394px;
 }
 
 #addnewitem {
@@ -60,20 +44,32 @@ ul, li {
 }
 
 #addnewitembody {
-  height: 60px;
-}
-
-Button {
-  font-weight: bold;
-  font-size: 0.8em;
-  margin: 1em 0.1em;
-  width: 7.5em;
-  text-align: center;
-  box-shadow: .5em .5em .2em #888888;
+  height: 10em;
+  width: 25em;
 }
 
 #addButton {
   float: right;
+}
+
+.listitem:hover {
+  background-color:#D3D3D3;
+}
+
+.hideContent {
+  text-overflow:ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 49px;
+}
+
+.showContent {
+  min-height: 49px;
+}
+
+.listitem {
+  height: auto;
+  border-bottom: 1px solid #D3D3D3;
 }
 
 div.buttons {
