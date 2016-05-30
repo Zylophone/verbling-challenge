@@ -30,6 +30,14 @@ Button {
   overflow-y:scroll;
 }
 
+#listarea::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+#listarea::-webkit-scrollbar-thumb {
+  background-color: #D3D3D3;
+}
+
 #searchbar input {
   margin: 0.5em 0em ;
   border: 3px solid #D3D3D3;
