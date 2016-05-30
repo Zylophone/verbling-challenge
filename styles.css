@@ -2,6 +2,7 @@ body {
   font-family: Lucida Console, Monaco5, monospace;
   height: 100vh;
 }
+
 ul, li {
     list-style: none;
     margin:0;
@@ -19,9 +20,11 @@ ul, li {
   padding: 0.5em;
   overflow-y:scroll;
 }
+
 .listtitle {
   font-weight: bold;
 }
+
 .hideContent {
   text-overflow:ellipsis;
   overflow: hidden;
@@ -46,4 +49,12 @@ ul, li {
 
 #addnewitembody {
   height: 60px;
+}
+
+Button {
+  font-weight: bold;
+  font-size: 0.8em;
+  margin: 1em 0.1em;
+  width: 7.5em;
+  text-align: center;
 }
