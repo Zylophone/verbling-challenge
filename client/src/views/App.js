@@ -10,19 +10,19 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       list: [
-        {title: 'list1 title', body: 'list1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 body', show: true, fullContent: false},
+        {title: 'list1 ', body: 'list1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 bodylist1 body', show: true, fullContent: false},
         {title: 'list2 title', body: 'list2 body', show: false, fullContent: false},
         {title: 'list3 title', body: 'list3 body', show: true, fullContent: false},
-        {title: 'list232 title', body: 'list2 body', show: true, fullContent: false},
-        {title: 'list4343 title', body: 'list3 body', show: true, fullContent: false},
-        {title: 'list232 title', body: 'list2 body', show: true, fullContent: false},
-        {title: 'list4343 title', body: 'list3 body', show: true, fullContent: false},
-        {title: 'list232 title', body: 'list2 body', show: true, fullContent: false},
-        {title: 'list4343 title', body: 'list3 body', show: true, fullContent: false},
-        {title: 'list232 title', body: 'list2 body', show: true, fullContent: false},
-        {title: 'list4343 title', body: 'list3 body', show: true, fullContent: false},
-        {title: 'list232 title', body: 'list2 body', show: true, fullContent: false},
-        {title: 'list4343 title', body: 'list3 body', show: true, fullContent: false}
+        {title: 'list4 title', body: 'list4 body', show: true, fullContent: false},
+        {title: 'list5 title', body: 'list5 body', show: true, fullContent: false},
+        {title: 'list6 title', body: 'list6 body', show: true, fullContent: false},
+        {title: 'list7 title', body: 'list7 body', show: true, fullContent: false},
+        {title: 'list8 title', body: 'list8 body list8 body list8 body list8 body list8 body list8 body list8 body', show: true, fullContent: false},
+        {title: 'list9 title', body: 'list9 body', show: true, fullContent: false},
+        {title: 'list10 title', body: 'list10 body', show: true, fullContent: false},
+        {title: 'list11 title', body: 'list11 body list11 body list11 body list11 body list11 body list11 body list11 body', show: true, fullContent: false},
+        {title: 'list12 title', body: 'list12 body', show: true, fullContent: false},
+        {title: 'list13 title', body: 'list13 body', show: true, fullContent: false}
       ],
       addItem: false
     }
