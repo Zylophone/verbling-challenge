@@ -70,7 +70,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-      <div>Tasks List</div>
+      <h1>Tasks List</h1>
       <SearchBar filterItems = {this.filter}/>
       <ItemsList itemsList = {this.state.list} click = {this.clickItem}/>
       <div className='buttons'>
