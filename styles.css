@@ -19,21 +19,22 @@ ul, li {
 }
 
 #listarea {
-  height: 400px;
-  width: 400px;
+  height: 394px;
+  width: 394px;
   border: 3px solid #D3D3D3;
-  padding: 0.5em;
   overflow-y:scroll;
 }
 
 .listtitle {
   font-weight: bold;
+  height: 19.5px;
 }
 
 .hideContent {
   text-overflow:ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  height: 29.5px;
 }
 
 .showContent {
@@ -41,13 +42,19 @@ ul, li {
 }
 
 .listitem {
-  height:auto;
+  height: auto;
   border-bottom: 1px solid #D3D3D3;
 }
 
+#searchbar input {
+  margin: 0.5em 0em ;
+  border: 3px solid #D3D3D3;
+  width: 15em;
+}
+
 #addnewitem {
-  margin: 1em auto;
-  width: 60%;
+  margin: 0;
+  width:374px;
   border: 3px solid #D3D3D3;
   padding: 10px;
 }
@@ -62,4 +69,13 @@ Button {
   margin: 1em 0.1em;
   width: 7.5em;
   text-align: center;
+  box-shadow: .5em .5em .2em #888888;
+}
+
+#addButton {
+  float: right;
+}
+
+div.buttons {
+  width: 400px;
 }

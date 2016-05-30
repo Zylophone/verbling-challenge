@@ -13,7 +13,7 @@ export default class SearchBar extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id='searchbar'>
         <input type='text' placeholder='Search...' ref='search' onChange={this.debouncedHandleChange.bind(this)} />
       </div>
     )
