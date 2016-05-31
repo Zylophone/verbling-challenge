@@ -51,7 +51,9 @@ export default class App extends React.Component {
 
   itemsListActions(action){
     const newList = ButtonActions(action, this.state.list);
-    this.setState({list: newList});
+    if(newList){
+      this.setState({list: newList});
+    }
   }
 
   addNewItem(item){
