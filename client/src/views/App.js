@@ -70,7 +70,7 @@ export default class App extends React.Component {
   }
 
   clickItem(id){
-    this.state.list[id].fullContent = this.state.list[id].fullContent ? false : true;
+    this.state.list[id].fullContent = !this.state.list[id].fullContent;
     this.setState({list: this.state.list});
   }
 
